@@ -3,7 +3,7 @@ name: publish
 on: [push]
 
 jobs:
-  publish-hello-world-image:
+  publish-ipyeos-image:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,8 +16,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build the hello-world Docker image
+    - name: Build the ipyeos Docker image
       run: |
-        docker build . --tag ghcr.io/uuosio/ipyeos-docker:latest
-        docker run ghcr.io/uuosio/ipyeos-docker:latest
-        docker push ghcr.io/uuosio/ipyeos-docker:latest
+        docker build . --tag ghcr.io/uuosio/ipyeos:latest
+        docker run ghcr.io/uuosio/ipyeos:latest
+        docker push ghcr.io/uuosio/ipyeos:latest
