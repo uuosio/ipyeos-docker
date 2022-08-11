@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 LABEL org.opencontainers.image.source="https://github.com/uuosio/ipyeos-docker"
 EXPOSE 9090
 EXPOSE 9092
+EXPOSE 9093
 RUN apt update
 RUN apt install -y wget
 RUN apt install -y python3.9-dev
